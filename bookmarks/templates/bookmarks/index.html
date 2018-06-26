@@ -1,0 +1,21 @@
+{% if bookmarks %}
+  <ol>
+    <h3>Global bookmarks:</h3>
+    {% for bookmark in bookmarks %}
+      <li><a href="{{ bookmark.url }}">{{ bookmark.name }}</a></li>
+    {% endfor %}
+  </ol>
+{% else %}
+  we have NO global bookmarks :(
+{% endif %}
+
+{% if personal_bookmarks %}
+  <ol>
+    <h3>Personal bookmarks for {{ user }}:</h3>
+    {% for pb in personal_bookmarks %}
+      <li><a href="{{ pb.url }}">{{ pb.name }}</a></li>
+    {% endfor %}
+  </ol>
+{% else %}
+  we have NO PERSONAL bookmarks :(
+{% endif %}
