@@ -1,6 +1,7 @@
 from rest_framework import serializers, viewsets, routers
 from .models import Bookmark, PersonalBookmark
 
+# TODO: CRITICAL: Disable this or modify to only work for admin/superuser
 class BookmarkSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Bookmark
