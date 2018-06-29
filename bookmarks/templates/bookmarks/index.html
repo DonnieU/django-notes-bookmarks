@@ -1,5 +1,5 @@
 {% if request.user.is_anonymous %}
-  <p>GO AWAY!</p>
+  <p> GO AWAY! </p>
 {% endif %}
 {% if bookmarks %}
   <ol>
@@ -9,7 +9,7 @@
     {% endfor %}
   </ol>
 {% else %}
-  <p>>we have NO global bookmarks :( </p>>
+  <p> we have NO global bookmarks :( </p>>
 {% endif %}
 
 {% if personal_bookmarks %}
@@ -20,5 +20,5 @@
     {% endfor %}
   </ol>
 {% else %}
-  <p>>we have NO PERSONAL bookmarks :( </p>
+  <p>we have NO PERSONAL bookmarks :( </p>
 {% endif %}
