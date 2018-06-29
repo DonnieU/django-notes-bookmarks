@@ -30,7 +30,9 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASE_URL=config('DATABASE_URL')
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS')
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+# ALLOWED_HOSTS = ALLOWED_HOSTS.split(',')
 
 # Application definition
 
